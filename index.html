@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>20일 완성 장애인복지</title>
+<meta name="description" content="장애인복지 이론과 퀴즈를 20일 동안 하루 5문항씩. 이론은 음성으로 들을 수 있고, 모든 기록은 기기 안에만 저장됩니다.">
+<meta name="theme-color" content="#125c4c">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self'; manifest-src 'self'; worker-src 'self'">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="복지공부 20일">
+<meta name="format-detection" content="telephone=no">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png">
+<link rel="icon" href="./icons/icon.svg" type="image/svg+xml">
+<link rel="icon" href="./icons/icon-192.png" sizes="192x192">
+<link rel="stylesheet" href="./style.css?v=2">
+</head>
+<body>
+
+<a class="skip-link" href="#main">본문으로 바로가기</a>
+
+<header class="topbar" id="topbar">
+  <button class="icon-btn" id="backBtn" type="button" aria-label="뒤로 가기" hidden>‹</button>
+  <div class="topbar-text">
+    <p class="eyebrow" id="topEyebrow">20일 완성</p>
+    <h1 id="topTitle">장애인복지</h1>
+  </div>
+  <span class="dday" id="ddayChip" hidden></span>
+</header>
+
+<main id="main" tabindex="-1"></main>
+
+<!-- 음성 듣기 바 (Day 이론 화면에서만 표시) -->
+<section class="player" id="player" aria-label="음성 듣기" hidden>
+  <div class="player-main">
+    <button class="tts-btn" id="ttsPrev" type="button" aria-label="이전 문단">⟨</button>
+    <button class="tts-btn tts-play" id="ttsPlay" type="button" aria-label="재생">
+      <span id="ttsPlayIcon" aria-hidden="true">▶</span>
+    </button>
+    <button class="tts-btn" id="ttsStop" type="button" aria-label="정지">■</button>
+    <button class="tts-btn" id="ttsNext" type="button" aria-label="다음 문단">⟩</button>
+    <div class="player-info">
+      <span class="player-status" id="ttsStatus">이론 듣기</span>
+      <span class="player-progress" id="ttsProgress">0 / 0</span>
+    </div>
+  </div>
+  <div class="player-sub">
+    <div class="seg" id="rateSeg" role="group" aria-label="재생 속도">
+      <button type="button" class="seg-btn" data-rate="0.9">0.9x</button>
+      <button type="button" class="seg-btn is-on" data-rate="1">1.0x</button>
+      <button type="button" class="seg-btn" data-rate="1.2">1.2x</button>
+      <button type="button" class="seg-btn" data-rate="1.4">1.4x</button>
+    </div>
+    <label class="check"><input type="checkbox" id="repeatChk"><span>반복</span></label>
+    <label class="check"><input type="checkbox" id="nextChk"><span>다음 Day</span></label>
+  </div>
+</section>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<noscript>
+  <p class="noscript">이 앱은 자바스크립트가 필요합니다. 브라우저 설정에서 자바스크립트를 켜 주세요.</p>
+</noscript>
+
+<script src="./data.js"></script>
+<script src="./app.js?v=3"></script>
+</body>
+</html>

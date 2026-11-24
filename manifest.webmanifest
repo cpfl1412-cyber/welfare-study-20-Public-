@@ -1,0 +1,21 @@
+{
+  "name": "20일 완성 장애인복지 — 이론·퀴즈",
+  "short_name": "복지공부 20일",
+  "description": "장애인복지 이론 20일과 하루 5문항 퀴즈. 이론은 음성으로 들을 수 있고, 학습 기록은 기기 안에만 저장됩니다.",
+  "lang": "ko",
+  "dir": "ltr",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui"],
+  "orientation": "portrait",
+  "background_color": "#f6f4ee",
+  "theme_color": "#125c4c",
+  "categories": ["education", "productivity"],
+  "icons": [
+    { "src": "./icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "./icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "./icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
+    { "src": "./icons/apple-touch-icon.png", "sizes": "180x180", "type": "image/png", "purpose": "any" }
+  ]
+}
